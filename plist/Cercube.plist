@@ -17,13 +17,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>bbs.brynts.WAWatusi</string>
+				<string>bbs.brynts.Cercube</string>
 				<key>bundle-version</key>
 				<string>5.4</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Watusi</string>
+				<string>Cercube</string>
 			</dict>
 		</dict>
 	</array>

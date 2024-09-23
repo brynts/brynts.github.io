@@ -26,7 +26,7 @@ let jsonToUpdate = {
             "subscriptions": {},
             "entitlements": {},
             "original_purchase_date": "2024-01-01T01:01:01Z",
-            "original_app_user_id": "$RCAnonymousID:07c8894bce7c49f389f2664d85070535",
+            "original_app_user_id": "70B24288-83C4-4035-B001-573285B21AE2",
             "non_subscriptions": {}
         }
     };

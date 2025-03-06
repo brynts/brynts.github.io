@@ -1,0 +1,32 @@
+name: Download and Commit File
+
+on:
+  workflow_dispatch:
+    inputs:
+      file_url:
+        description: 'URL file yang akan diunduh'
+        required: true
+      file_name:
+        description: 'Nama file untuk disimpan di repository'
+        required: true
+
+jobs:
+  download_and_commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Download file
+        run: |
+          curl -L ${{ github.event.inputs.file_url }} -o ${{ github.event.inputs.file_name }}
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ${{ github.event.inputs.file_name }}
+          git commit -m "Add file ${{ github.event.inputs.file_name }}"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

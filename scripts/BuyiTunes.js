@@ -34,7 +34,7 @@ var productidmap = {
     'com.zerone.hidesktop': ['iscreen', 'com.zerone.hidesktop.forever', 0],
     'co.bazaart.app': ['bazaart', 'Bazaart_Premium_Monthly_v9', 0],
     'com.pollykann.app': ['pollykann', 'vip.forever.pollykann', 1],
-    'org.zrey.money': ['costmemo', 'org.zrey.money.lifetime', 1]
+    'org.zrey.money': ['costmemo', 'org.zrey.money.lifetime', 1],
     'Nitefall': ['nitefall', 'com.foxfort.nitefall.premium']
 }
 

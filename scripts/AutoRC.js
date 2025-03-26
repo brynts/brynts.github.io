@@ -167,8 +167,7 @@ const mapping = {
     'Blackout/': ['premium', 'blackout_299_lt'],
     'Budgetify/': ['premium', 'budgetify_3999_lt'],
     'Dedupe/': ['Pro', 'com.curiouscreatorsco.Dedupe.pro.lifetime.notrial.39_99'],
-    'Wozi': ['wozi_pro_2023'],
-    'Nitefall': ['premium', 'com.foxfort.nitefall.premium']
+    'Wozi': ['wozi_pro_2023']
 };
 
 var _0xodF = 'jsjiami.com.v7';

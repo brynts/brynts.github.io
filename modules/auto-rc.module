@@ -1,0 +1,21 @@
+#!name=Auto RC (by @brynts)
+#!desc=Nothing
+# Script: revenuecat-unlock.js by @brynts
+# Repo: https://raw.githubusercontent.com/brynts/brynts.github.io/refs/heads/egern/modules/auto-rc.module
+
+template_arguments:
+  - name: rc_hostname
+    value: api.revenuecat.com, api.rc-backup.com
+  - name: rc_script_url
+    value: https://raw.githubusercontent.com/brynts/brynts.github.io/refs/heads/egern/scripts/auto-rc.js
+
+[MITM]
+hostname = %APPEND% {{ rc_hostname }}
+
+[Header Rewrite]
+http-request ^https:\/\/({{ rc_hostname }})\/.+\/(receipts$|subscribers\/?.*?)$ header-del x-revenuecat-token
+http-request ^https:\/\/({{ rc_hostname }})\/.+\/(receipts$|subscribers\/?.*?)$ header-del x-revenuecat-session-id
+http-request ^https:\/\/({{ rc_hostname }})\/.+\/(receipts$|subscribers\/?.*?)$ header-del x-revenuecat-etag
+
+[Script]
+revenuecat-unlock = type=http-response,pattern=^https:\/\/({{ rc_hostname }})\/.+\/(receipts$|subscribers\/?.*?)$,requires-body=1,script-path={{ rc_script_url }},script-update-interval=86400

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brynts • sapu.tr</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .section-header {
+            font-size: 1.75rem;
+            line-height: 1.1;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .profile-img {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        box-shadow 0.4s ease;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.015) rotate(1deg);
+            box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.5);
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0a] text-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0a0a0a]/80 backdrop-blur-lg">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-x-2.5">
+                <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center">
+                    <span class="text-[#0a0a0a] font-bold text-lg tracking-tighter">b</span>
+                </div>
+                <span class="font-display text-xl font-semibold tracking-tighter">brynts</span>
+            </div>
+            
+            <div>
+                <a href="https://blog.sapu.tr" target="_blank" 
+                   class="px-5 py-2 rounded-xl bg-white text-[#0a0a0a] text-sm font-semibold hover:bg-yellow-400 transition flex items-center gap-x-2">
+                    <span>Blog</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="max-w-4xl mx-auto px-6 pt-20 pb-12 text-center">
+        <!-- Profile Image -->
+        <div class="flex justify-center mb-8">
+            <div class="relative">
+                <img src="assets/brynts.png" 
+                     alt="brynts profile" 
+                     class="profile-img w-64 h-64 md:w-72 md:h-72 rounded-3xl object-cover border-4 border-white/10">
+                <div class="absolute -bottom-2 -right-2 bg-[#0a0a0a] px-3 py-1 rounded-2xl border border-white/10 text-xs font-mono tracking-widest text-white/60">
+                    NOOB DEV
+                </div>
+            </div>
+        </div>
+
+        <h1 class="font-display text-7xl md:text-8xl tracking-tighter font-semibold mb-2">brynts</h1>
+        <p class="text-2xl text-white/70 tracking-tight mb-6">noob dev</p>
+        
+        <p class="max-w-sm mx-auto text-lg text-white/60 mb-10">
+            Just a guy who likes to build stuff and figure things out as I go.
+        </p>
+
+        <div class="flex justify-center">
+            <a href="#about" 
+               class="px-8 py-4 rounded-2xl border border-white/20 hover:bg-white/5 font-medium transition flex items-center justify-center gap-x-2">
+                <span>Learn more</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- About / Simple Bio -->
+    <div id="about" class="max-w-3xl mx-auto px-6 py-12 border-t border-white/10">
+        <div class="text-center mb-8">
+            <h2 class="section-header">About</h2>
+        </div>
+
+        <div class="max-w-md mx-auto text-center text-white/70 text-[15px] leading-relaxed mb-8">
+            <p>Hey, I'm Bryan. I code, tinker, and occasionally make things that work. 
+            Still figuring it all out, but having fun along the way.</p>
+        </div>
+
+        <!-- Social buttons -->
+        <div class="max-w-md mx-auto mb-10">
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="https://github.com/brynts" target="_blank"
+                   class="flex items-center gap-x-2 px-5 py-2.5 rounded-2xl border border-white/20 hover:bg-white/5 transition text-sm">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://x.com/brynts" target="_blank"
+                   class="flex items-center gap-x-2 px-5 py-2.5 rounded-2xl border border-white/20 hover:bg-white/5 transition text-sm">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span>X</span>
+                </a>
+                <a href="https://reddit.com/brynts" target="_blank"
+                   class="flex items-center gap-x-2 px-5 py-2.5 rounded-2xl border border-white/20 hover:bg-white/5 transition text-sm">
+                    <i class="fa-brands fa-reddit-alien"></i>
+                    <span>Reddit</span>
+                </a>
+                <a href="https://profile.playstation.com/lazaretho" target="_blank"
+                   class="flex items-center gap-x-2 px-5 py-2.5 rounded-2xl border border-white/20 hover:bg-white/5 transition text-sm">
+                    <i class="fa-brands fa-playstation"></i>
+                    <span>PlayStation</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Fun specs - kept minimal -->
+        <div class="max-w-md mx-auto">
+            <div class="glass rounded-3xl p-6 border border-white/10 text-sm">
+                <div class="flex items-center gap-x-2 mb-4 text-yellow-400">
+                    <i class="fa-solid fa-terminal text-xs"></i>
+                    <span class="font-mono text-xs tracking-[2px] text-yellow-400/80">SYSTEM SPECS</span>
+                </div>
+                <div class="grid grid-cols-2 gap-y-2 font-mono text-xs text-white/70">
+                    <div>Chip</div><div class="text-right text-white">My Brain M5 Ultra</div>
+                    <div>Memory</div><div class="text-right text-white">16 GB of Coffee</div>
+                    <div>Serial</div><div class="text-right text-white">BRYN64NT3NG</div>
+                    <div>OS</div><div class="text-right text-white">macOS Tahoe 5.00an Enak</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-8 text-xs text-white/40 border-t border-white/10">
+        © brynts • sapu.tr
+    </footer>
+
+    <script>
+        // Simple smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        console.log('%c[sapu.tr] Simple landing updated.', 'color:#facc15');
+    </script>
+</body>
+</html>
